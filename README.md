@@ -1,77 +1,100 @@
 # AI Product Portfolio
 
-### A documentation-first portfolio of AI product strategy, workflow design, evaluation systems, and growth experiments.
+### An AI-native product ecosystem across acquisition, assessment, evaluation, personalization, and growth.
 
-Over the past few years, I have worked with founders and engineering teams to build AI-powered products across interview preparation, automated evaluation, workflow automation, personalization, and growth.
+This repository documents a set of AI-powered product systems built across interview preparation, automated evaluation, workflow automation, personalization, and growth.
 
-This repository documents the product thinking behind those systems: why they were built, how AI was incorporated, how quality was validated, and what tradeoffs shaped the product.
+The focus is not production code. The focus is the product thinking behind production AI systems: why they were built, how AI was incorporated, how quality was validated, and what tradeoffs shaped the product.
 
-Production code, internal dashboards, customer data, proprietary prompts, and company-specific implementation details are intentionally abstracted.
-
----
-
-## Portfolio Philosophy
-
-Most product portfolios answer:
-
-> What did you build?
-
-This portfolio is designed to answer:
-
-> How did you think through building it?
-
-Each case study follows a practical product documentation framework:
-
-| Area | What it covers |
-|---|---|
-| Problem | Business context, user pain, and why the product needed to exist |
-| Product Vision | What the system was meant to change for users and the business |
-| User Journey | How users moved through the experience |
-| AI Workflow | Where AI entered the system and what role it played |
-| Product Decisions | Tradeoffs, constraints, and prioritization choices |
-| Prompt Strategy | How prompts were designed as product interfaces |
-| Validation | How output quality was checked and improved |
-| Metrics | What success looked like after launch |
-| Roadmap | What the product needed next |
-| Lessons | What worked, what changed, and what I would repeat |
+Production code, customer data, internal dashboards, proprietary prompts, and company-specific implementation details are intentionally abstracted.
 
 ---
 
 ## AI Product Ecosystem
 
-Although each project can be read independently, together they represent a broader AI product ecosystem.
-
 ```text
+                 AI Product Ecosystem
+
 Acquire
-  -> AI Lead Intelligence Engine
-     Identify high-quality prospects and personalize outreach
-
+│
+├── AI Lead Intelligence Engine
+│   Identify high-quality prospects and personalize outreach
+│
+▼
 Understand
-  -> AI Discovery & Onboarding
-     Capture goals, context, and recommended starting points
-
+│
+├── AI Discovery & Onboarding
+│   Capture goals, context, and recommended starting points
+│
+▼
 Assess
-  -> AI Interview Platform
-     Simulate realistic company-specific interview experiences
-
+│
+├── AI Interview Platform
+│   Simulate realistic company-specific interview experiences
+│
+▼
 Evaluate
-  -> AI Homework Grader
-     Review submissions and generate structured feedback
-
+│
+├── AI Homework Grader
+│   Review submissions and generate structured feedback
+│
+▼
 Personalize
-  -> AI Learning Path Engine
-     Recommend next steps based on performance and skill gaps
-
+│
+├── AI Learning Path Engine
+│   Recommend next steps based on performance and skill gaps
+│
+▼
 Improve
-  -> Content Intelligence
-     Identify curriculum gaps from learner outcomes and feedback
+│
+└── Content Intelligence
+    Identify curriculum gaps from learner outcomes and feedback
 ```
 
-The common thread: every interaction creates data that can improve the user experience, the product workflow, and the next recommendation.
+Together, these systems create a feedback loop where every interaction can improve the learner experience, the product workflow, and the next recommendation.
 
 ---
 
-## Featured Case Studies
+## Product Map
+
+| Project | Problem | AI capability | Product value |
+|---|---|---|---|
+| AI Lead Intelligence Engine | Generic outreach | Personalization | Better targeting and more relevant conversations |
+| AI Discovery & Onboarding | Unclear learner goals | Classification | Cleaner routing into the right experience |
+| AI Interview Platform | Unrealistic interview prep | Evaluation | Structured, personalized feedback at scale |
+| AI Homework Grader | Slow manual grading | LLM evaluation | Faster review while preserving feedback quality |
+| AI Learning Path Engine | One-size-fits-all learning | Recommendations | Personalized next steps based on skill gaps |
+| Content Intelligence | Hidden curriculum gaps | Pattern analysis | Better content decisions from learner outcomes |
+
+---
+
+## Why This Repository Exists
+
+AI products are often presented as demos or code repositories.
+
+I wanted to document something different: the product decisions, evaluation systems, validation approaches, and tradeoffs that go into building production AI systems.
+
+That is what this repository is about.
+
+---
+
+## What You'll Learn
+
+Each case study explores:
+
+- Product strategy
+- User journeys
+- AI workflows
+- Prompt strategy
+- Evaluation systems
+- Validation approaches
+- Product tradeoffs
+- Roadmaps
+- Lessons learned
+
+---
+
+## Case Studies
 
 ### AI Interview Platform
 
@@ -83,15 +106,24 @@ Candidates often prepare with isolated practice questions that do not reflect re
 
 Designed an AI-powered interview platform that recreates company-specific interview experiences across coding, behavioral, resume, product sense, data modeling, and architecture rounds.
 
-**Product highlights**
+**AI components**
 
-- Company-specific interview tracks
-- SQL and Python execution workflows
-- Behavioral interviews with speech-to-text
-- Resume review and structured feedback
-- Product sense, data modeling, and architecture prompts
-- AI-generated coaching and next-step recommendations
-- Validation strategy for scoring and feedback quality
+- Answer evaluation
+- Structured feedback generation
+- Interview flow orchestration
+- Speech-based behavioral review
+- Resume and context-aware coaching
+
+**Product decisions**
+
+- Make the experience feel like a real interview loop, not a quiz bank
+- Separate feedback quality from scoring quality
+- Design rubrics before scaling automated evaluation
+- Use AI to coach, not just grade
+
+**Outcome**
+
+Reduced manual review effort while giving candidates structured, personalized interview feedback.
 
 ---
 
@@ -105,13 +137,23 @@ Manual grading was slow, inconsistent, and difficult to scale without reducing f
 
 Designed an AI-powered grading workflow that evaluates learner submissions using structured rubrics and generates actionable feedback for review.
 
-**Product highlights**
+**AI components**
 
-- Rubric-based grading
-- LLM evaluation workflow
-- Prompt strategy for consistent feedback
-- Human review loop
-- Validation framework for grading quality
+- Rubric-based evaluation
+- Feedback generation
+- Error pattern detection
+- Human review workflow
+
+**Product decisions**
+
+- Prioritize consistent feedback over fully automated grading
+- Keep review paths for low-confidence or edge-case outputs
+- Treat rubrics as a product interface, not internal documentation
+- Validate outputs against examples before expanding scope
+
+**Outcome**
+
+Created a scalable grading workflow that reduced reviewer effort while protecting learner trust.
 
 ---
 
@@ -125,14 +167,24 @@ Traditional outreach treated every prospective learner the same, which made mess
 
 Designed an AI-powered lead qualification pipeline that analyzes audience data, classifies interest, recommends relevant programs, and supports personalized outreach.
 
-**Product highlights**
+**AI components**
 
-- AI profile analysis
+- Profile analysis
 - Interest classification
 - Lead scoring
-- Personalized course recommendations
-- Outreach workflow automation
-- Growth experimentation
+- Recommendation logic
+- Personalized outreach support
+
+**Product decisions**
+
+- Start with segmentation before message generation
+- Keep recommendations explainable enough for sales follow-up
+- Design outreach around user intent, not generic persona labels
+- Measure quality through downstream conversation signals
+
+**Outcome**
+
+Improved lead prioritization and made outreach more relevant to the learner's likely goals.
 
 ---
 
@@ -146,13 +198,24 @@ Learners often followed the same path regardless of prior knowledge, interview p
 
 Designed a recommendation engine that creates personalized learning paths using onboarding signals, interview results, tagged content, and performance data.
 
-**Product highlights**
+**AI components**
 
 - Skill-gap analysis
-- AI-tagged educational content
+- Content tagging
 - Recommendation logic
-- Personalized learning paths
+- Learning path generation
 - Content intelligence feedback loop
+
+**Product decisions**
+
+- Use assessment data to drive recommendations
+- Make the next step clear instead of over-personalizing everything
+- Connect learning paths back to measurable learner outcomes
+- Use aggregate performance data to improve future content
+
+**Outcome**
+
+Moved the product from static curriculum delivery toward adaptive learning recommendations.
 
 ---
 
@@ -175,37 +238,48 @@ Designed a recommendation engine that creates personalized learning paths using 
 
 ## Product Playbook
 
-The same product development pattern shows up across these systems:
-
 ```text
 Problem Discovery
-   -> Product Strategy
-   -> User Journey
-   -> Solution Design
-   -> AI Workflow Design
-   -> Prompt Strategy
-   -> Validation & Testing
-   -> Launch
-   -> Measure
-   -> Iterate
+        ↓
+Product Strategy
+        ↓
+User Journey
+        ↓
+Solution Design
+        ↓
+AI Workflow Design
+        ↓
+Prompt Strategy
+        ↓
+Validation & Testing
+        ↓
+Launch
+        ↓
+Measure
+        ↓
+Iterate
 ```
 
-This is the operating system behind the portfolio: design for user value, validate AI quality, launch carefully, and improve from real behavior.
+This framework helps balance user value, technical feasibility, AI quality, and business impact.
 
 ---
 
-## What This Portfolio Shows
+## Documentation Progress
 
-- How I frame ambiguous AI product problems
-- How I translate business goals into product workflows
-- How I think about prompts, evaluation, and validation
-- How I design human review into AI systems
-- How I connect product decisions to growth and user outcomes
+| Area | Status |
+|---|---|
+| AI Interview Platform | 🟢 Case study foundation |
+| AI Homework Grader | 🟡 Expanding product notes |
+| AI Lead Intelligence Engine | 🟡 Expanding workflow notes |
+| AI Learning Path Engine | 🟡 Expanding recommendation logic |
+| Content Intelligence | ⚪ Planned |
 
 ---
 
 ## Confidentiality
 
-These case studies are based on production AI systems. To respect confidentiality, company names, customer data, internal dashboards, proprietary prompts, source code, and sensitive implementation details are omitted.
+These case studies are based on production AI systems. Company names, customer data, internal dashboards, proprietary prompts, source code, and sensitive implementation details are omitted.
 
 The goal is to make the product thinking visible without exposing private information.
+
+This repository is continuously evolving as I document additional AI products, product decisions, and lessons learned from building production AI systems.
