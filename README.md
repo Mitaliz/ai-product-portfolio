@@ -2,6 +2,13 @@
 
 ### An AI-native product ecosystem across acquisition, assessment, evaluation, personalization, and growth.
 
+![Product Strategy](https://img.shields.io/badge/-Product%20Strategy-6A5ACD?style=flat-square)
+![Prompt Engineering](https://img.shields.io/badge/-Prompt%20Engineering-6A5ACD?style=flat-square)
+![AI Evaluation](https://img.shields.io/badge/-AI%20Evaluation-6A5ACD?style=flat-square)
+![Workflow Automation](https://img.shields.io/badge/-Workflow%20Automation-6A5ACD?style=flat-square)
+![Recommendation Systems](https://img.shields.io/badge/-Recommendation%20Systems-6A5ACD?style=flat-square)
+![Human-in-the-Loop](https://img.shields.io/badge/-Human--in--the--Loop-6A5ACD?style=flat-square)
+
 This repository documents a set of AI-powered product systems built across interview preparation, automated evaluation, workflow automation, personalization, and growth.
 
 The focus is not production code. The focus is the product thinking behind production AI systems: why they were built, how AI was incorporated, how quality was validated, and what tradeoffs shaped the product.
@@ -10,45 +17,26 @@ Production code, customer data, internal dashboards, proprietary prompts, and co
 
 ---
 
-## AI Product Ecosystem
+## Why This Repository Exists
 
-```text
-                 AI Product Ecosystem
+AI products are often presented as demos or code repositories.
 
-Acquire
-│
-├── AI Lead Intelligence Engine
-│   Identify high-quality prospects and personalize outreach
-│
-▼
-Understand
-│
-├── AI Discovery & Onboarding
-│   Capture goals, context, and recommended starting points
-│
-▼
-Assess
-│
-├── AI Interview Platform
-│   Simulate realistic company-specific interview experiences
-│
-▼
-Evaluate
-│
-├── AI Homework Grader
-│   Review submissions and generate structured feedback
-│
-▼
-Personalize
-│
-├── AI Learning Path Engine
-│   Recommend next steps based on performance and skill gaps
-│
-▼
-Improve
-│
-└── Content Intelligence
-    Identify curriculum gaps from learner outcomes and feedback
+I wanted to document something different: the product decisions, evaluation systems, validation approaches, and tradeoffs that go into building production AI systems.
+
+---
+
+## The AI Product Ecosystem
+
+Six systems, one continuous loop — insight from every stage feeds the next.
+
+```mermaid
+flowchart LR
+    A["🎯 Acquire\nAI Lead Intelligence Engine"] --> B["🧭 Understand\nAI Discovery & Onboarding"]
+    B --> C["💻 Assess\nAI Interview Platform"]
+    C --> D["✅ Evaluate\nAI Homework Grader"]
+    D --> E["📈 Personalize\nAI Learning Path Engine"]
+    E --> F["🔁 Improve\nContent Intelligence"]
+    F -. insights feed back .-> A
 ```
 
 Together, these systems create a feedback loop where every interaction can improve the learner experience, the product workflow, and the next recommendation.
@@ -68,35 +56,18 @@ Together, these systems create a feedback loop where every interaction can impro
 
 ---
 
-## Why This Repository Exists
-
-AI products are often presented as demos or code repositories.
-
-I wanted to document something different: the product decisions, evaluation systems, validation approaches, and tradeoffs that go into building production AI systems.
-
-That is what this repository is about.
-
----
-
 ## What You'll Learn
 
-Each case study explores:
-
-- Product strategy
-- User journeys
-- AI workflows
-- Prompt strategy
-- Evaluation systems
-- Validation approaches
-- Product tradeoffs
-- Roadmaps
-- Lessons learned
+Each case study covers product strategy, user journeys, AI workflows, prompt strategy, evaluation systems, validation approaches, product tradeoffs, roadmaps, and lessons learned.
 
 ---
 
 ## Case Studies
 
-### AI Interview Platform
+### 🏆 AI Interview Platform
+*Flagship case study*
+
+**An AI-powered interview platform that recreates realistic, company-specific interview loops — not just another quiz bank.**
 
 **Problem**
 
@@ -104,7 +75,7 @@ Candidates often prepare with isolated practice questions that do not reflect re
 
 **Solution**
 
-Designed an AI-powered interview platform that recreates company-specific interview experiences across coding, behavioral, resume, product sense, data modeling, and architecture rounds.
+Recreates company-specific interview experiences across coding, behavioral, resume, product sense, data modeling, and architecture rounds.
 
 **AI components**
 
@@ -129,13 +100,15 @@ Reduced manual review effort while giving candidates structured, personalized in
 
 ### AI Homework Grader
 
+**An AI-powered grading workflow that turns learner submissions into structured, actionable feedback.**
+
 **Problem**
 
 Manual grading was slow, inconsistent, and difficult to scale without reducing feedback quality.
 
 **Solution**
 
-Designed an AI-powered grading workflow that evaluates learner submissions using structured rubrics and generates actionable feedback for review.
+Evaluates learner submissions using structured rubrics and generates actionable feedback for review.
 
 **AI components**
 
@@ -159,13 +132,15 @@ Created a scalable grading workflow that reduced reviewer effort while protectin
 
 ### AI Lead Intelligence Engine
 
+**An AI-powered lead qualification pipeline that turns generic outreach into personalized, intent-driven conversations.**
+
 **Problem**
 
 Traditional outreach treated every prospective learner the same, which made messaging generic and harder to convert.
 
 **Solution**
 
-Designed an AI-powered lead qualification pipeline that analyzes audience data, classifies interest, recommends relevant programs, and supports personalized outreach.
+Analyzes audience data, classifies interest, recommends relevant programs, and supports personalized outreach.
 
 **AI components**
 
@@ -190,13 +165,15 @@ Improved lead prioritization and made outreach more relevant to the learner's li
 
 ### AI Learning Path Engine
 
+**A recommendation engine that turns onboarding, interview, and performance signals into a personalized learning path.**
+
 **Problem**
 
 Learners often followed the same path regardless of prior knowledge, interview performance, or skill gaps.
 
 **Solution**
 
-Designed a recommendation engine that creates personalized learning paths using onboarding signals, interview results, tagged content, and performance data.
+Creates personalized learning paths using onboarding signals, interview results, tagged content, and performance data.
 
 **AI components**
 
@@ -221,58 +198,38 @@ Moved the product from static curriculum delivery toward adaptive learning recom
 
 ## AI Capabilities Demonstrated
 
-| Capability | Where it appears |
-|---|---|
-| AI evaluation systems | Interview Platform, Homework Grader |
-| Prompt strategy | Interview Platform, Homework Grader, Lead Intelligence |
-| Workflow automation | Lead Intelligence, Homework Grader |
-| Recommendation systems | Learning Path Engine, Lead Intelligence |
-| Multi-modal AI | Interview Platform |
-| Human-in-the-loop design | Interview Platform, Homework Grader |
-| Product strategy | All systems |
-| AI validation | Interview Platform, Homework Grader |
-| Growth systems | Lead Intelligence |
-| Personalization | Learning Path Engine |
+| Capability | # Projects | Where it appears |
+|---|---|---|
+| Prompt strategy | 3 | Interview Platform, Homework Grader, Lead Intelligence |
+| Workflow automation | 2 | Lead Intelligence, Homework Grader |
+| AI evaluation systems | 2 | Interview Platform, Homework Grader |
+| AI validation | 2 | Interview Platform, Homework Grader |
+| Human-in-the-loop design | 2 | Interview Platform, Homework Grader |
+| Recommendation systems | 2 | Learning Path Engine, Lead Intelligence |
+| Product strategy | 4 | All systems |
+| Multi-modal AI | 1 | Interview Platform |
+| Growth systems | 1 | Lead Intelligence |
+| Personalization | 1 | Learning Path Engine |
 
 ---
 
 ## Product Playbook
 
-```text
-Problem Discovery
-        ↓
-Product Strategy
-        ↓
-User Journey
-        ↓
-Solution Design
-        ↓
-AI Workflow Design
-        ↓
-Prompt Strategy
-        ↓
-Validation & Testing
-        ↓
-Launch
-        ↓
-Measure
-        ↓
-Iterate
+```mermaid
+flowchart TD
+    A[Problem Discovery] --> B[Product Strategy]
+    B --> C[User Journey]
+    C --> D[Solution Design]
+    D --> E[AI Workflow Design]
+    E --> F[Prompt Strategy]
+    F --> G[Validation & Testing]
+    G --> H[Launch]
+    H --> I[Measure]
+    I --> J[Iterate]
+    J -.-> A
 ```
 
 This framework helps balance user value, technical feasibility, AI quality, and business impact.
-
----
-
-## Documentation Progress
-
-| Area | Status |
-|---|---|
-| AI Interview Platform | 🟢 Case study foundation |
-| AI Homework Grader | 🟡 Expanding product notes |
-| AI Lead Intelligence Engine | 🟡 Expanding workflow notes |
-| AI Learning Path Engine | 🟡 Expanding recommendation logic |
-| Content Intelligence | ⚪ Planned |
 
 ---
 
@@ -280,6 +237,4 @@ This framework helps balance user value, technical feasibility, AI quality, and 
 
 These case studies are based on production AI systems. Company names, customer data, internal dashboards, proprietary prompts, source code, and sensitive implementation details are omitted.
 
-The goal is to make the product thinking visible without exposing private information.
-
-This repository is continuously evolving as I document additional AI products, product decisions, and lessons learned from building production AI systems.
+The goal is to make the product thinking visible without exposing private information. New case studies are added as more AI products, decisions, and lessons get documented.
